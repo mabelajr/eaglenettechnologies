@@ -1,0 +1,342 @@
+:root {
+    --primary: #003366;
+    --secondary: #e8491d;
+    --light: #f4f4f4;
+    --dark: #333;
+    --gray: #ddd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: #dae7f1;
+    background-image: url('cann.png');
+    background-attachment: fixed;
+}
+
+/* ================= Header ================= */
+
+header {
+  background: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.logo {
+    height: 60px;
+}
+
+.menu-btn {
+  cursor: pointer;
+  font-size: 26px;
+  padding: 10px;
+  color: white;
+  z-index: 1001;
+  margin-top: 10px;
+  align-self: flex-start;
+}
+
+
+/* ================= Navigation ================= */
+
+nav {
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+    background: orange;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* ================= Dropdown Menu ================= */
+.menu-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* appears just below header */
+  left: 10px;
+  width: 300px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: var(--primary);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+}
+
+.menu-content.active {
+  display: block;
+}
+
+.dropdown {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dropdown-header {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+  border-top: 1px solid #1e4e7d;
+}
+
+.dropdown-header:hover {
+    background-color: orange;
+}
+
+.dropdown-body {
+    display: none;
+    flex-direction: column;
+    background-color: var(--primary);
+}
+.dropdown-body a {
+  padding: 10px 40px;
+}
+.dropdown-body a:hover {
+    background-color: green;
+}
+
+.dropdown.open .dropdown-body {
+    display: flex;
+}
+
+/* ================= Hero Section ================= */
+
+.hero {
+    background-size: cover;
+    background-position: center;
+    color: rgb(75, 238, 129);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+/* ================= Services ================= */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1, h2, h3 {
+    color: orange;
+}
+
+h2 {
+    margin: 2rem 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary);
+    display: inline-block;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.service-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-header {
+    background: var(--primary);
+    color: white;
+    padding: 1rem;
+}
+
+.service-body {
+    padding: 1.5rem;
+}
+
+.service-body ul {
+    list-style-position: inside;
+}
+
+.service-body li {
+    margin-bottom: 0.5rem;
+}
+/* Preloader Styles */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* Change to match your design */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.preloader-logo {
+    width: 100px;
+    height: auto;
+    animation: spin 1s linear infinite;
+}
+
+/* Rotate animation */
+@keyframes spin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
+}
+/* ================= Footer ================= */
+
+footer {
+    background-color: #748ddd;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    background-color: orange;
+}
+
+/* ================= Forms ================= */
+
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: orange;
+}
+
+/* ================= Responsive Design ================= */
+
+@media (max-width: 768px) {
+header {
+  background: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+}
+
+    .logo-container {
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 1rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}

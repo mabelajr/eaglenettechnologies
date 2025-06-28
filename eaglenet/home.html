@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Eaglenet</title>
+        <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background: #003366;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+      
+        h1 {
+            color: #003366;
+        }
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 2rem 0;
+        }
+        .service-card {
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader">
+    <img src="logo.png" alt="Loading..." class="preloader-logo">
+</div>
+    <header>
+        <img src="logo.png" alt="Eaglenet Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+        <div id="menuContent" class="menu-content">
+     <div class="dropdown">
+        <div class="dropdown-header">Wi-Fi Services</div>
+        <div class="dropdown-body">
+            <a href="#bundles">Buy bundles</a>
+            <a href="#wifi-install">Installation</a>
+            <a href="#wifi-config">Configuration</a>
+            <a href="#wifi-optimize">Optimization</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <div class="dropdown-header">Computer Hardware Services</div>
+        <div class="dropdown-body">
+            <a href="#pc-repair">PC/Laptop Repair</a>
+            <a href="#hardware-upgrade">Hardware Upgrades</a>
+            <a href="#virus">Virus Removal</a>
+            <a href="#data-recovery">Data Recovery</a>
+            <a href="#printer">Printer Support</a>
+            <a href="#custom-pc">Custom PC Builds</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <div class="dropdown-header">Networking & Internet Services</div>
+        <div class="dropdown-body">
+            <a href="#wifi-setup">Wi-Fi Setup</a>
+            <a href="#lan-wan">LAN/WAN Setup</a>
+            <a href="#router">Router Configuration</a>
+            <a href="#network-trouble">Troubleshooting</a>
+            <a href="#vpn">VPN Setup</a>
+            <a href="#bandwidth">Bandwidth Optimization</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <div class="dropdown-header">Software & IT Support</div>
+        <div class="dropdown-body">
+            <a href="#os-install">OS Installation</a>
+            <a href="#software">Software Licensing</a>
+            <a href="#office-setup">Microsoft/Google Setup</a>
+            <a href="#remote-support">Remote Support</a>
+            <a href="#email">Email Setup</a>
+            <a href="#cloud">Cloud Storage Setup</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <div class="dropdown-header">Security & Surveillance Systems</div>
+        <div class="dropdown-body">
+            <a href="#cctv">CCTV Installation</a>
+            <a href="#alarm">Alarm Systems</a>
+            <a href="#fence">Electric Fence</a>
+            <a href="#cybersecurity">Cybersecurity</a>
+            <a href="#access">Access Control</a>
+            <a href="#smart-home">Smart Security</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <div class="dropdown-header">Web & Graphic Design Services</div>
+        <div class="dropdown-body">
+            <a href="#web-dev">Website Development</a>
+            <a href="#ecommerce">E-commerce</a>
+            <a href="#logo">Logo & Branding</a>
+            <a href="#social-graphics">Social Media Graphics</a>
+            <a href="#flyer">Business Cards & Flyers</a>
+            <a href="#uiux">UI/UX Design</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <div class="dropdown-header">Printing & Document Services</div>
+        <div class="dropdown-body">
+            <a href="#print-doc">Professional Printing</a>
+            <a href="#binding">Document Binding</a>
+            <a href="#passport">Passport Photos</a>
+            <a href="#online-app">Online Applications</a>
+            <a href="#scanning">Scanning & Digitizing</a>
+            <a href="#card-printing">Card Printing</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <div class="dropdown-header">Electronics Sales & Repairs</div>
+        <div class="dropdown-body">
+            <a href="#sales">Sales (Phones, Laptops)</a>
+            <a href="#screen-replace">Screen Replacement</a>
+            <a href="#battery">Battery Replacement</a>
+            <a href="#console">Console Repairs</a>
+            <a href="#smart-setup">Smart Device Setup</a>
+            <a href="#warranty">Warranty Support</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <div class="dropdown-header">Digital Marketing & Online Services</div>
+        <div class="dropdown-body">
+            <a href="#social-media">Social Media Management</a>
+            <a href="#seo">SEO</a>
+            <a href="#ads">Google/Facebook Ads</a>
+            <a href="#content">Content Writing</a>
+            <a href="#youtube">YouTube & Video Editing</a>
+            <a href="#registration">Online Business Registration</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <div class="dropdown-header">Programming & App Development</div>
+        <div class="dropdown-body">
+            <a href="#software-dev">Custom Software</a>
+            <a href="#mobile-app">Mobile Apps</a>
+            <a href="#database">Database Management</a>
+            <a href="#pos">POS Systems</a>
+            <a href="#automation">Automation Scripts</a>
+            <a href="#api">API Integration</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <div class="dropdown-header">Training & Consultancy</div>
+        <div class="dropdown-body">
+            <a href="#computer-training">Computer Literacy</a>
+            <a href="#office-training">Office Suite Training</a>
+            <a href="#cyber">Cybersecurity Awareness</a>
+            <a href="#coding">Coding Classes</a>
+            <a href="#marketing">Marketing Training</a>
+            <a href="#it-consultancy">IT Consultancy</a>
+        </div>
+    </div>
+    </div>
+    </header>
+    
+    <main>
+        <h1>Welcome to Eaglenet</h1>
+        <p>Your premier one-stop solution for all your networking and technology needs.</p>
+        
+        <section>
+            <h2>Our Comprehensive Services</h2>
+            <div class="services-container">
+                <div class="service-card">
+                    <h3>Networking Solutions</h3>
+                    <ul>
+                        <li>High-speed internet services</li>
+                        <li>Network installation & configuration</li>
+                        <li>Secure business networking</li>
+                        <li>Wireless network setup</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Security Systems</h3>
+                    <ul>
+                        <li>CCTV camera installation</li>
+                        <li>Electric fence installation</li>
+                        <li>Security system integration</li>
+                        <li>Surveillance solutions</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Document Services</h3>
+                    <ul>
+                        <li>Professional printing</li>
+                        <li>Document binding</li>
+                        <li>Passport photos & applications</li>
+                        <li>Online application assistance</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>IT Services</h3>
+                    <ul>
+                        <li>PC maintenance & repair</li>
+                        <li>Software installation</li>
+                        <li>Data recovery</li>
+                        <li>System upgrades</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Graphics & Design</h3>
+                    <ul>
+                        <li>Graphic design services</li>
+                        <li>Logo creation</li>
+                        <li>Marketing materials</li>
+                        <li>Branding solutions</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Electronics Sales</h3>
+                    <ul>
+                        <li>Computers & laptops</li>
+                        <li>Smartphones & tablets</li>
+                        <li>Networking equipment</li>
+                        <li>All electronics devices</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <article>
+            <h2>Latest News</h2>
+            <p>We've just upgraded our network infrastructure to provide even faster speeds and expanded our service offerings to become your complete technology solution provider!</p>
+            <p>Visit our newly opened electronics showroom for the best deals on quality devices.</p>
+        </article>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Eaglenet. All rights reserved. | 
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms of Service</a>
+        </p>
+    </footer>
+    <script>
+  const menuBtn = document.getElementById('menuBtn');
+  const menuContent = document.getElementById('menuContent');
+
+  menuBtn.addEventListener('click', () => {
+    menuContent.classList.toggle('active');
+  });
+
+  const dropdownHeaders = document.querySelectorAll('.dropdown-header');
+  dropdownHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const parent = header.parentElement;
+      parent.classList.toggle('open');
+      dropdownHeaders.forEach(h => {
+        if (h !== header) {
+          h.parentElement.classList.remove('open');
+        }
+      });
+    });
+  });
+</script>
+    <script>
+    window.addEventListener('load', () => {
+        const preloader = document.getElementById('preloader');
+        preloader.style.opacity = '0';
+        setTimeout(() => {
+            preloader.style.display = 'none';
+        }, 500);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Items - Eaglenet</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="preloader">
+    <img src="../logo.png" alt="Loading..." class="preloader-logo">
+</div>
+    <header>
+        <img src="../logo.png" alt="Eaglenet Logo" class="logo">
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="post_items.html">Post Items</a></li>
+            <li><a href="manage_items.html">Manage Items</a></li>
+            <li><a href="users.html">Users</a></li>
+            <li><a href="../login.html">Logout</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h1>Post New Items</h1>
+        
+        <form action="#" method="post">
+            <div>
+                <label for="item_name">Item Name:</label>
+                <input type="text" id="item_name" name="item_name" required>
+            </div>
+            
+            <div>
+                <label for="item_description">Description:</label>
+                <textarea id="item_description" name="item_description" rows="4" required></textarea>
+            </div>
+            
+            <div>
+                <label for="item_category">Category:</label>
+                <select id="item_category" name="item_category">
+                    <option value="electronics">Electronics</option>
+                    <option value="furniture">Furniture</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div>
+                <label for="item_price">Price:</label>
+                <input type="number" id="item_price" name="item_price" step="0.01" required>
+            </div>
+            
+            <div>
+                <label for="item_image">Image:</label>
+                <input type="file" id="item_image" name="item_image" accept="image/*">
+            </div>
+            
+            <button type="submit">Post Item</button>
+        </form>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Eaglenet. All rights reserved. | 
+            <a href="../privacy.html">Privacy Policy</a> | 
+            <a href="../terms.html">Terms of Service</a>
+        </p>
+    </footer>
+    <script>
+  const menuBtn = document.getElementById('menuBtn');
+  const menuContent = document.getElementById('menuContent');
+
+  menuBtn.addEventListener('click', () => {
+    menuContent.classList.toggle('active');
+  });
+
+  const dropdownHeaders = document.querySelectorAll('.dropdown-header');
+  dropdownHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const parent = header.parentElement;
+      parent.classList.toggle('open');
+      dropdownHeaders.forEach(h => {
+        if (h !== header) {
+          h.parentElement.classList.remove('open');
+        }
+      });
+    });
+  });
+</script>
+    <script>
+    window.addEventListener('load', () => {
+        const preloader = document.getElementById('preloader');
+        preloader.style.opacity = '0';
+        setTimeout(() => {
+            preloader.style.display = 'none';
+        }, 500);
+    });
+</script>
+
+</body>
+</html>

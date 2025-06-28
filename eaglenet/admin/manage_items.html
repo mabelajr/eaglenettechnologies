@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Items - Eaglenet</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="preloader">
+    <img src="../logo.png" alt="Loading..." class="preloader-logo">
+</div>
+    <header>
+        <img src="../logo.png" alt="Eaglenet Logo" class="logo">
+          <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="post_items.html">Post Items</a></li>
+            <li><a href="manage_items.html">Manage Items</a></li>
+            <li><a href="users.html">Users</a></li>
+            <li><a href="../login.html">Logout</a></li>
+        </ul>
+    </nav>
+    </header>
+    
+  
+    
+    <main>
+        <h1>Manage Items</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Item Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1001</td>
+                    <td>Wireless Headphones</td>
+                    <td>Electronics</td>
+                    <td>$99.99</td>
+                    <td>Active</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Deactivate</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1002</td>
+                    <td>Office Chair</td>
+                    <td>Furniture</td>
+                    <td>$149.99</td>
+                    <td>Active</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Deactivate</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1003</td>
+                    <td>Winter Jacket</td>
+                    <td>Clothing</td>
+                    <td>$79.99</td>
+                    <td>Inactive</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Activate</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Eaglenet. All rights reserved. | 
+            <a href="../privacy.html">Privacy Policy</a> | 
+            <a href="../terms.html">Terms of Service</a>
+        </p>
+    </footer>
+    <script>
+  const menuBtn = document.getElementById('menuBtn');
+  const menuContent = document.getElementById('menuContent');
+
+  menuBtn.addEventListener('click', () => {
+    menuContent.classList.toggle('active');
+  });
+
+  const dropdownHeaders = document.querySelectorAll('.dropdown-header');
+  dropdownHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const parent = header.parentElement;
+      parent.classList.toggle('open');
+      dropdownHeaders.forEach(h => {
+        if (h !== header) {
+          h.parentElement.classList.remove('open');
+        }
+      });
+    });
+  });
+</script>
+    <script>
+    window.addEventListener('load', () => {
+        const preloader = document.getElementById('preloader');
+        preloader.style.opacity = '0';
+        setTimeout(() => {
+            preloader.style.display = 'none';
+        }, 500);
+    });
+</script>
+
+</body>
+</html>
